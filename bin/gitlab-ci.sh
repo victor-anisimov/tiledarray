@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "$0 $@"
+echo "$ $0 $@"
 
 if [ "$#" -lt 1 ]; then
     echo "CMake project directory argument required"
@@ -10,11 +10,7 @@ fi
 project_dir=$1
 shift
 
-cmake_args=""
-cmake_args+=" -DTA_BUILD_UNITTEST=TRUE"
-cmake_args+=" -Dblacs_LIBRARIES=scalapack-openmpi"
-cmake_args+=" -Dscalapack_LIBRARIES=scalapack-openmpi"
-cmake_args+=" -Dlapack_LIBRARIES=lapack"
+cmake_args="-DTA_BUILD_UNITTEST=TRUE"
 
 for arg in $@; do
     cmake_args+=" -D$arg"
@@ -23,7 +19,7 @@ done
 cmake_build_target="cmake --build . --target "
 
 set -e
-#set -x
+set -x
 
 # to run OpenMPI in docker as root
 export OMPI_ALLOW_RUN_AS_ROOT=1
