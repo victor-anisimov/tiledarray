@@ -27,15 +27,12 @@ build:
   script:
     - mkdir build
     - cd build
-    - cmake .. -DCMAKE_TOOLCHAIN_FILE=../cmake/gitlab-ci.cmake
-        -DCMAKE_BUILD_TYPE=${BUILD_TYPE}
-        -D${TA_PYTHON}
-        -D${ENABLE_MKL}
-        -D${ENABLE_SCALAPACK}
-    - make tiledarray
-    - make examples
-    - make ta_test
-    - make check
+    - ../bin/gitlab-ci.sh
+        CMAKE_BUILD_TYPE=${BUILD_TYPE}
+        ${TA_PYTHON}
+        ${ENABLE_MKL}
+        ${ENABLE_SCALAPACK}
+        ${Eigen3_DIR}
   parallel:
     matrix:
       - CXX: [ g++ ]
@@ -51,3 +48,8 @@ build:
         IMAGE : [ "ubuntu:20.04" ]
         BUILD_TYPE : [ "Release", "Debug" ]
         ENABLE_MKL : [ "ENABLE_MKL=ON", "ENABLE_MKL=OFF" ]
+      - CXX: [ g++ ]
+        IMAGE : [ "ubuntu:18.04" ]
+        BUILD_TYPE : [ "Release", "Debug" ]
+        Eigen3_DIR : [ "/dev/null" ]
+
