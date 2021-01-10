@@ -25,6 +25,7 @@ ubuntu:
     - mkdir build
     - cd build
     - TA_CI_CONFIG="CMAKE_BUILD_TYPE=${BUILD_TYPE} ${TA_PYTHON} ${BLA_VENDOR} ${ENABLE_SCALAPACK}"
+    - TA_CI_CONFIG+=" ${TA_FETCH_BOOST}"; unset TA_FETCH_BOOST
     - unset BUILD_TYPE TA_PYTHON BLA_VENDOR ENABLE_SCALAPACK
     # !!! Unset env vars that may conflict with build, eg FindBLAS uses $ENV{BLA_VENDOR}
     - ../bin/gitlab-ci.sh ..
@@ -35,13 +36,17 @@ ubuntu:
         #lapack_LIBRARIES=lapack
   parallel:
     matrix:
-      - IMAGE : [ "ubuntu:18.04", "ubuntu:20.04" ]
+      # - IMAGE : [ "ubuntu:18.04", "ubuntu:20.04" ]
+      #   CXX: [ g++ ]
+      #   BUILD_TYPE : [ "Release" ]
+      #   BLA_VENDOR : [ "BLA_VENDOR=Intel10_64lp_seq", "BLA_VENDOR=Intel10_64lp" ]
+      #   ENABLE_SCALAPACK : [ "ENABLE_SCALAPACK=ON", "ENABLE_SCALAPACK=OFF" ]
+      #   TA_PYTHON : [ "TA_PYTHON=OFF" ] # needs to be fixed for MKL
+      # - IMAGE : [ "ubuntu:18.04", "ubuntu:20.04" ]
+      #   CXX: [ g++, clang++-9 ]
+      #   BUILD_TYPE : [ "Release", "Debug" ]
+      #   ENABLE_SCALAPACK : [ "ENABLE_SCALAPACK=ON", "ENABLE_SCALAPACK=OFF" ]
+      - IMAGE : [ "ubuntu:20.04" ]
         CXX: [ g++ ]
-        BUILD_TYPE : [ "Release" ]
-        BLA_VENDOR : [ "BLA_VENDOR=Intel10_64lp_seq", "BLA_VENDOR=Intel10_64lp" ]
-        ENABLE_SCALAPACK : [ "ENABLE_SCALAPACK=ON", "ENABLE_SCALAPACK=OFF" ]
-        TA_PYTHON : [ "TA_PYTHON=OFF" ] # needs to be fixed for MKL
-      - IMAGE : [ "ubuntu:18.04", "ubuntu:20.04" ]
-        CXX: [ g++, clang++-9 ]
-        BUILD_TYPE : [ "Release", "Debug" ]
-        ENABLE_SCALAPACK : [ "ENABLE_SCALAPACK=ON", "ENABLE_SCALAPACK=OFF" ]
+        BUILD_TYPE : [ "DEBUG" ]
+        TA_FETCH_BOOST : [ "TA_FETCH_BOOST=ON"]
