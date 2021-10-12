@@ -186,21 +186,42 @@ if(CUDA_FOUND)
   list(APPEND TILEDARRAY_HEADER_FILES
      TiledArray/external/cuda.h
      TiledArray/external/librett.h
-     TiledArray/cuda/cublas.h
-     TiledArray/cuda/btas_cublas.h
-     TiledArray/cuda/btas_um_tensor.h
-     TiledArray/cuda/cpu_cuda_vector.h
-     TiledArray/cuda/cuda_task_fn.h
-     TiledArray/cuda/kernel/mult_kernel.h
-     TiledArray/cuda/kernel/mult_kernel_impl.h
-     TiledArray/cuda/kernel/reduce_kernel.h
-     TiledArray/cuda/kernel/reduce_kernel_impl.h
-     TiledArray/cuda/platform.h
-     TiledArray/cuda/thrust.h
-     TiledArray/cuda/um_allocator.h
-     TiledArray/cuda/um_storage.h)
+     TiledArray/gpu/cublas.h
+     TiledArray/gpu/btas_cublas.h
+     TiledArray/gpu/btas_um_tensor.h
+     TiledArray/gpu/cpu_cuda_vector.h
+     TiledArray/gpu/cuda_task_fn.h
+     TiledArray/gpu/kernel/mult_kernel.h
+     TiledArray/gpu/kernel/mult_kernel_impl.h
+     TiledArray/gpu/kernel/reduce_kernel.h
+     TiledArray/gpu/kernel/reduce_kernel_impl.h
+     TiledArray/gpu/platform.h
+     TiledArray/gpu/thrust.h
+     TiledArray/gpu/um_allocator.h
+     TiledArray/gpu/um_storage.h)
 
 endif(CUDA_FOUND)
+
+if(ENABLE_SYCL)
+
+  list(APPEND TILEDARRAY_HEADER_FILES
+     TiledArray/external/sycl.h
+     TiledArray/external/librett.h
+     TiledArray/gpu/cublas.h
+     TiledArray/gpu/btas_cublas.h
+     TiledArray/gpu/btas_um_tensor.h
+     TiledArray/gpu/cpu_cuda_vector.h
+     TiledArray/gpu/cuda_task_fn.h
+     TiledArray/gpu/kernel/mult_kernel.h
+     TiledArray/gpu/kernel/mult_kernel_impl.h
+     TiledArray/gpu/kernel/reduce_kernel.h
+     TiledArray/gpu/kernel/reduce_kernel_impl.h
+     TiledArray/gpu/platform.h
+     TiledArray/gpu/thrust.h
+     TiledArray/gpu/um_allocator.h
+     TiledArray/gpu/um_storage.h)
+
+endif(ENABLE_SYCL)
 
 set(TILEDARRAY_SOURCE_FILES
 TiledArray/tiledarray.cpp
@@ -221,13 +242,13 @@ set(_TILEDARRAY_DEPENDENCIES MADworld TiledArray_Eigen BTAS::BTAS blaspp_headers
 if(CUDA_FOUND)
 
   list(APPEND TILEDARRAY_SOURCE_FILES
-          TiledArray/cuda/btas_um_tensor.cpp
-          TiledArray/cuda/cpu_cuda_vector.cu
-          TiledArray/cuda/kernel/mult_kernel.cu
-          TiledArray/cuda/kernel/reduce_kernel.cu
-          TiledArray/cuda/um_storage.cu)
+          TiledArray/gpu/btas_um_tensor.cpp
+          TiledArray/gpu/cpu_cuda_vector.cu
+          TiledArray/gpu/kernel/mult_kernel.cu
+          TiledArray/gpu/kernel/reduce_kernel.cu
+          TiledArray/gpu/um_storage.cu)
 
-  set_source_files_properties(TiledArray/cuda/btas_um_tensor.cpp
+  set_source_files_properties(TiledArray/gpu/btas_um_tensor.cpp
           PROPERTIES
           LANGUAGE CUDA)
 
@@ -235,6 +256,32 @@ if(CUDA_FOUND)
   list(APPEND _TILEDARRAY_DEPENDENCIES CUDA::cublas CUDA::nvToolsExt TiledArray_UMPIRE TiledArray_LIBRETT)
 
 endif(CUDA_FOUND)
+
+if(ENABLE_SYCL)
+
+  list(APPEND TILEDARRAY_SOURCE_FILES
+          TiledArray/gpu/btas_um_tensor.cpp
+          TiledArray/gpu/cpu_cuda_vector.cpp
+          TiledArray/gpu/kernel/mult_kernel.cpp
+          TiledArray/gpu/kernel/reduce_kernel.cpp
+          TiledArray/gpu/um_storage.cpp)
+
+  # the list of libraries on which TiledArray depends on
+  list(APPEND _TILEDARRAY_DEPENDENCIES TiledArray_UMPIRE TiledArray_LIBRETT)
+
+  #append_flags(CMAKE_CXX_FLAGS "-fsycl")
+  set_source_files_properties(TiledArray/gpu/btas_um_tensor.cpp       PROPERTIES COMPILE_FLAGS -fsycl)
+  set_source_files_properties(TiledArray/gpu/cpu_cuda_vector.cpp      PROPERTIES COMPILE_FLAGS -fsycl -DONEDPL_USE_TBB_BACKEND=0 -D_GLIBCXX_USE_TBB_PAR_BACKEND=0)
+  set_source_files_properties(TiledArray/gpu/kernel/mult_kernel.cpp   PROPERTIES COMPILE_FLAGS -fsycl)
+  set_source_files_properties(TiledArray/gpu/kernel/reduce_kernel.cpp PROPERTIES COMPILE_FLAGS -fsycl)
+  set_source_files_properties(TiledArray/gpu/um_storage.cpp           PROPERTIES COMPILE_FLAGS -fsycl)
+  set_source_files_properties(TiledArray/tensor/tensor.cpp            PROPERTIES COMPILE_FLAGS -fsycl)
+  set_source_files_properties(TiledArray/sparse_shape.cpp             PROPERTIES COMPILE_FLAGS -fsycl)
+  set_source_files_properties(TiledArray/tensor_impl.cpp              PROPERTIES COMPILE_FLAGS -fsycl)
+  set_source_files_properties(TiledArray/array_impl.cpp               PROPERTIES COMPILE_FLAGS -fsycl)
+  set_source_files_properties(TiledArray/dist_array.cpp               PROPERTIES COMPILE_FLAGS -fsycl)
+
+endif(ENABLE_SYCL)
 
 if( TARGET TiledArray_SCALAPACK )
   list(APPEND _TILEDARRAY_DEPENDENCIES TiledArray_SCALAPACK)

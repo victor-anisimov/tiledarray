@@ -4,10 +4,10 @@
 
 // clang-format off
 #include <btas/array_adaptor.h>  // provides c++17 features (stds::data, std::size) when compiling CUDA (i.e. c++14)
-#include <TiledArray/cuda/btas_um_tensor.h>
+#include <TiledArray/gpu/btas_um_tensor.h>
 // clang-format on
 
-#ifdef TILEDARRAY_HAS_CUDA
+#if defined (TILEDARRAY_HAS_CUDA) || (TILEDARRAY_HAS_SYCL)
 
 template class btas::varray<double, TiledArray::cuda_um_allocator<double>>;
 template class btas::varray<float, TiledArray::cuda_um_allocator<float>>;
@@ -32,4 +32,4 @@ template class TiledArray::Tile<
 template class TiledArray::Tile<btas::Tensor<
     long, TiledArray::Range, TiledArray::cuda_um_btas_varray<long>>>;
 
-#endif  // TILEDARRAY_HAS_CUDA
+#endif  // (TILEDARRAY_HAS_CUDA) || (TILEDARRAY_HAS_SYCL)

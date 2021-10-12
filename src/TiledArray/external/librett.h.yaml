@@ -1,0 +1,32 @@
+---
+MainSourceFile:  '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/sycl/TiledArray/external/librett.h'
+Replacements:
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/librett.h'
+    Offset:          922
+    Length:          0
+    ReplacementText: "#include <CL/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/librett.h'
+    Offset:          2495
+    Length:          12
+    ReplacementText: 'sycl::queue'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/librett.h'
+    Offset:          2508
+    Length:          0
+    ReplacementText: '*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest: []
+...

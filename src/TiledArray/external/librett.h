@@ -24,6 +24,10 @@
 #ifndef TILEDARRAY_EXTERNAL_LIBRETT_H__INCLUDED
 #define TILEDARRAY_EXTERNAL_LIBRETT_H__INCLUDED
 
+#ifdef SYCL
+#include <CL/sycl.hpp>
+#endif
+
 #include <TiledArray/config.h>
 
 #ifdef TILEDARRAY_HAS_CUDA
@@ -78,7 +82,12 @@ inline void permutation_to_col_major(std::vector<int>& perm) {
  */
 template <typename T>
 void librett_permute(T* inData, T* outData, const TiledArray::Range& range,
-                  const TiledArray::Permutation& perm, cudaStream_t stream) {
+#ifdef SYCL
+                  const TiledArray::Permutation& perm, sycl::queue *stream) 
+#else
+                  const TiledArray::Permutation& perm, cudaStream_t stream)
+#endif
+  {
   auto extent = range.extent();
   std::vector<int> extent_int(extent.begin(), extent.end());
 

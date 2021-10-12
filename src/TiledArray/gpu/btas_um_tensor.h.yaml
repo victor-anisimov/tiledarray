@@ -1,0 +1,122 @@
+---
+MainSourceFile:  '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/sycl/TiledArray/cuda/btas_um_tensor.h'
+Replacements:
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/btas_um_tensor.h'
+    Offset:          917
+    Length:          0
+    ReplacementText: "#include <CL/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/btas_um_tensor.h'
+    Offset:          7903
+    Length:          30
+    ReplacementText: '*stream->wait()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/btas_um_tensor.h'
+    Offset:          8547
+    Length:          30
+    ReplacementText: '*stream->wait()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/btas_um_tensor.h'
+    Offset:          10028
+    Length:          30
+    ReplacementText: '*stream->wait()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/btas_um_tensor.h'
+    Offset:          10673
+    Length:          30
+    ReplacementText: '*stream->wait()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/btas_um_tensor.h'
+    Offset:          12758
+    Length:          30
+    ReplacementText: '*stream->wait()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/btas_um_tensor.h'
+    Offset:          13275
+    Length:          30
+    ReplacementText: '*stream->wait()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/btas_um_tensor.h'
+    Offset:          15532
+    Length:          30
+    ReplacementText: '*stream->wait()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/btas_um_tensor.h'
+    Offset:          16177
+    Length:          30
+    ReplacementText: '*stream->wait()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/btas_um_tensor.h'
+    Offset:          19770
+    Length:          0
+    ReplacementText: "  /*\n  DPCT1003:51: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/btas_um_tensor.h'
+    Offset:          19785
+    Length:          23
+    ReplacementText: '(dpct::get_current_device().queues_wait_and_throw(), 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/btas_um_tensor.h'
+    Offset:          20578
+    Length:          0
+    ReplacementText: "  /*\n  DPCT1003:52: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/btas_um_tensor.h'
+    Offset:          20593
+    Length:          23
+    ReplacementText: '(dpct::get_current_device().queues_wait_and_throw(), 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest: []
+...

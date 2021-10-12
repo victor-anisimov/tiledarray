@@ -21,6 +21,125 @@
  *
  */
 
+#ifdef SYCL
+/*
+ * SYCL portion of the code begins here
+ */
+
+#ifndef TILEDARRAY_SYCL_REDUCE_KERNEL_IMPL_H__INCLUDED
+#define TILEDARRAY_SYCL_REDUCE_KERNEL_IMPL_H__INCLUDED
+
+#include <CL/sycl.hpp>
+#include "dpct/dpct.hpp"
+#include <limits>
+
+#include <TiledArray/external/sycl.h>
+
+namespace TiledArray {
+
+namespace detail {
+
+template <typename T>
+struct absolute_value {
+  T operator()(const T &x) const {
+    return x < T(0) ? -x : x;
+  }
+};
+
+}  // namespace detail
+
+/// T = reduce(T* arg)
+template <typename T, typename ReduceOp>
+T reduce_sycl_kernel_impl(ReduceOp &&op, const T *arg, std::size_t n, T init,
+                          sycl::queue *stream, int device_id) {
+  dpct::dev_mgr::instance().select_device(device_id);
+
+  auto arg_p = dpct::get_device_pointer(arg);
+
+  auto result = std::reduce(
+      oneapi::dpl::execution::make_device_policy(*stream),
+      thrust::sycl::par.on(stream), arg_p, arg_p + n, init,
+      std::forward<ReduceOp>(op));
+
+  return result;
+}
+
+template <typename T>
+T product_reduce_sycl_kernel_impl(const T *arg, std::size_t n,
+                                  sycl::queue *stream, int device_id) {
+  T init(1);
+  std::multiplies<T> mul_op;
+  return reduce_sycl_kernel_impl(mul_op, arg, n, init, stream, device_id);
+}
+
+template <typename T>
+T sum_reduce_sycl_kernel_impl(const T *arg, std::size_t n, sycl::queue *stream,
+                              int device_id) {
+  T init(0);
+  std::plus<T> plus_op;
+  return reduce_sycl_kernel_impl(plus_op, arg, n, init, stream, device_id);
+}
+
+template <typename T>
+T max_reduce_sycl_kernel_impl(const T *arg, std::size_t n, sycl::queue *stream,
+                              int device_id) {
+  T init = std::numeric_limits<T>::lowest();
+  oneapi::dpl::maximum<T> max_op;
+  return reduce_sycl_kernel_impl(max_op, arg, n, init, stream, device_id);
+}
+
+template <typename T>
+T min_reduce_sycl_kernel_impl(const T *arg, std::size_t n, sycl::queue *stream,
+                              int device_id) {
+  T init = std::numeric_limits<T>::max();
+  oneapi::dpl::minimum<T> min_op;
+  return reduce_sycl_kernel_impl(min_op, arg, n, init, stream, device_id);
+}
+
+template <typename T>
+T absmax_reduce_sycl_kernel_impl(const T *arg, std::size_t n,
+                                 sycl::queue *stream, int device_id) {
+  T init(0);
+  oneapi::dpl::maximum<T> max_op;
+  detail::absolute_value<T> abs_op;
+
+  dpct::dev_mgr::instance().select_device(device_id);
+
+  auto arg_p = dpct::get_device_pointer(arg);
+
+  auto result = std::transform_reduce(
+      oneapi::dpl::execution::make_device_policy(*stream),
+      arg_p, arg_p + n, init, max_op, abs_op);
+
+  return result;
+}
+
+template <typename T>
+T absmin_reduce_sycl_kernel_impl(const T *arg, std::size_t n,
+                                 sycl::queue *stream, int device_id) {
+  T init(0);
+  thrust::minimum<T> min_op;
+  detail::absolute_value<T> abs_op;
+
+  dpct::dev_mgr::instance().select_device(device_id);
+
+  auto arg_p = dpct::get_device_pointer(arg);
+
+  auto result = std::transform_reduce(
+      oneapi::dpl::execution::make_device_policy(*stream),
+      arg_p, arg_p + n, init, min_op, abs_op);
+  return result;
+}
+
+}  // namespace TiledArray
+
+#endif  // TILEDARRAY_SYCL_REDUCE_KERNEL_IMPL_H__INCLUDED
+
+#else   // SYCL
+/*
+ * CUDA portion of the code begins here
+ */
+
 #ifndef TILEDARRAY_CUDA_REDUCE_KERNEL_IMPL_H__INCLUDED
 #define TILEDARRAY_CUDA_REDUCE_KERNEL_IMPL_H__INCLUDED
 
@@ -128,3 +247,5 @@ T absmin_reduce_cuda_kernel_impl(const T *arg, std::size_t n,
 }  // namespace TiledArray
 
 #endif  // TILEDARRAY_CUDA_REDUCE_KERNEL_IMPL_H__INCLUDED
+
+#endif  // SYCL

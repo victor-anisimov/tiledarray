@@ -24,6 +24,8 @@
 #ifndef TILEDARRAY_EXTERNAL_CUDA_H__INCLUDED
 #define TILEDARRAY_EXTERNAL_CUDA_H__INCLUDED
 
+#include <CL/sycl.hpp>
+#include <dpct/dpct.hpp>
 #include <cassert>
 #include <cstdlib>
 #include <vector>
@@ -32,15 +34,13 @@
 
 #ifdef TILEDARRAY_HAS_CUDA
 
-#include <cuda.h>
-#include <cuda_runtime.h>
-#include <nvToolsExt.h>
-#include <thrust/system/cuda/error.h>
-#include <thrust/system_error.h>
+#include <dpct/dpl_utils.hpp>
+#include <oneapi/dpl/execution>
+#include <oneapi/dpl/algorithm>
 
 // for memory management
 #include <umpire/Umpire.hpp>
-#include <umpire/strategy/QuickPool.hpp>
+#include <umpire/strategy/DynamicPool.hpp>
 #include <umpire/strategy/SizeLimiter.hpp>
 #include <umpire/strategy/ThreadSafeAllocator.hpp>
 
@@ -55,10 +55,16 @@
 #define CudaSafeCallNoThrow(err) __cudaSafeCallNoThrow(err, __FILE__, __LINE__)
 #define CudaCheckError() __cudaCheckError(__FILE__, __LINE__)
 
-inline void __cudaSafeCall(cudaError err, const char* file, const int line) {
+inline void __cudaSafeCall(int err, const char* file, const int line) {
 #ifdef TILEDARRAY_CHECK_CUDA_ERROR
-  if (cudaSuccess != err) {
+  /*
+  DPCT1000:1: Error handling if-stmt was detected but could not be rewritten.
+  */
+  if (0 != err) {
     std::stringstream ss;
+    /*
+    DPCT1001:0: The statement could not be removed.
+    */
     ss << "cudaSafeCall() failed at: " << file << ":" << line;
     std::string what = ss.str();
     throw thrust::system_error(err, thrust::cuda_category(), what);
@@ -66,10 +72,15 @@ inline void __cudaSafeCall(cudaError err, const char* file, const int line) {
 #endif
 }
 
-inline void __cudaSafeCallNoThrow(cudaError err, const char* file,
-                                  const int line) {
+inline void __cudaSafeCallNoThrow(int err, const char* file, const int line) {
 #ifdef TILEDARRAY_CHECK_CUDA_ERROR
-  if (cudaSuccess != err) {
+  /*
+  DPCT1000:3: Error handling if-stmt was detected but could not be rewritten.
+  */
+  if (0 != err) {
+    /*
+    DPCT1001:2: The statement could not be removed.
+    */
     madness::print_error("cudaSafeCallNoThrow() failed at: ", file, ":", line);
   }
 #endif
@@ -77,9 +88,19 @@ inline void __cudaSafeCallNoThrow(cudaError err, const char* file,
 
 inline void __cudaCheckError(const char* file, const int line) {
 #ifdef TILEDARRAY_CHECK_CUDA_ERROR
-  cudaError err = cudaGetLastError();
-  if (cudaSuccess != err) {
+  /*
+  DPCT1010:6: SYCL uses exceptions to report errors and does not use the error
+  codes. The call was replaced with 0. You need to rewrite this code.
+  */
+  int err = 0;
+  /*
+  DPCT1000:5: Error handling if-stmt was detected but could not be rewritten.
+  */
+  if (0 != err) {
     std::stringstream ss;
+    /*
+    DPCT1001:4: The statement could not be removed.
+    */
     ss << "cudaCheckError() failed at: " << file << ":" << line;
     std::string what = ss.str();
     throw thrust::system_error(err, thrust::cuda_category(), what);
@@ -111,7 +132,11 @@ inline int num_cuda_streams() {
 
 inline int num_cuda_devices() {
   int num_devices = -1;
-  CudaSafeCall(cudaGetDeviceCount(&num_devices));
+  /*
+  DPCT1003:7: Migrated API does not return error code. (*, 0) is inserted. You
+  may need to rewrite this code.
+  */
+  CudaSafeCall((num_devices = dpct::dev_mgr::instance().device_count(), 0));
   return num_devices;
 }
 
@@ -153,7 +178,7 @@ inline int current_cuda_device_id(World& world) {
   return cuda_device_id;
 }
 
-inline void CUDART_CB cuda_readyflag_callback(void* userData) {
+inline void cuda_readyflag_callback(void* userData) {
   // convert void * to std::atomic<bool>
   std::atomic<bool>* flag = static_cast<std::atomic<bool>*>(userData);
   // set the flag to be true
@@ -168,9 +193,13 @@ struct ProbeFlag {
   std::atomic<bool>* flag;
 };
 
-inline void thread_wait_cuda_stream(const cudaStream_t& stream) {
+inline void thread_wait_cuda_stream(sycl::queue&* const stream) {
   std::atomic<bool>* flag = new std::atomic<bool>(false);
 
+  /*
+  DPCT1007:8: Migration of this CUDA API is not supported by the Intel(R) DPC++
+  Compatibility Tool.
+  */
   CudaSafeCall(
       cudaLaunchHostFunc(stream, detail::cuda_readyflag_callback, flag));
 
@@ -185,12 +214,12 @@ inline void thread_wait_cuda_stream(const cudaStream_t& stream) {
 
 }  // namespace detail
 
-inline const cudaStream_t*& tls_cudastream_accessor() {
-  static thread_local const cudaStream_t* thread_local_stream_ptr{nullptr};
+inline const sycl::queue**& tls_cudastream_accessor() {
+  static thread_local const sycl::queue** thread_local_stream_ptr{nullptr};
   return thread_local_stream_ptr;
 }
 
-inline void synchronize_stream(const cudaStream_t* stream) {
+inline void synchronize_stream(sycl::queue** const stream) {
   tls_cudastream_accessor() = stream;
 }
 
@@ -232,8 +261,16 @@ class cudaEnv {
       int num_devices = detail::num_cuda_devices();
       int device_id = detail::current_cuda_device_id(world);
       // set device for current MPI process .. will be set in the ctor as well
-      CudaSafeCall(cudaSetDevice(device_id));
-      CudaSafeCall(cudaDeviceSetCacheConfig(cudaFuncCachePreferShared));
+      /*
+      DPCT1003:9: Migrated API does not return error code. (*, 0) is inserted.
+      You may need to rewrite this code.
+      */
+      CudaSafeCall((dpct::dev_mgr::instance().select_device(device_id), 0));
+      /*
+      DPCT1027:10: The call to cudaDeviceSetCacheConfig was replaced with 0,
+      because DPC++ currently does not support setting cache config on devices.
+      */
+      CudaSafeCall(0);
 
       // uncomment to debug umpire ops
       //
@@ -257,7 +294,7 @@ class cudaEnv {
       // subsequent allocs will use 1/10 of the total device memory
       auto alloc_grain = mem_total_free.second / 10;
       auto um_dynamic_pool =
-          rm.makeAllocator<umpire::strategy::QuickPool, introspect>(
+          rm.makeAllocator<umpire::strategy::DynamicPool, introspect>(
               "UMDynamicPool", rm.getAllocator("UM"), mem_total_free.second,
               alloc_grain);
       auto thread_safe_um_dynamic_pool =
@@ -270,7 +307,7 @@ class cudaEnv {
               "size_limited_alloc", rm.getAllocator("DEVICE"),
               mem_total_free.first);
       auto dev_dynamic_pool =
-          rm.makeAllocator<umpire::strategy::QuickPool, introspect>(
+          rm.makeAllocator<umpire::strategy::DynamicPool, introspect>(
               "CUDADynamicPool", dev_size_limited_alloc, 0, alloc_grain);
       auto thread_safe_dev_dynamic_pool =
           rm.makeAllocator<umpire::strategy::ThreadSafeAllocator, introspect>(
@@ -295,7 +332,7 @@ class cudaEnv {
     return cuda_device_concurrent_managed_access_;
   }
 
-  size_t stream_id(const cudaStream_t& stream) const {
+  size_t stream_id(sycl::queue&* const stream) const {
     auto it = std::find(cuda_streams_.begin(), cuda_streams_.end(), stream);
     if (it == cuda_streams_.end()) abort();
     return it - cuda_streams_.begin();
@@ -328,15 +365,15 @@ class cudaEnv {
     return result;
   }
 
-  const cudaStream_t& cuda_stream(std::size_t i) const {
+  const sycl::queue*& cuda_stream(std::size_t i) const {
     return cuda_streams_.at(i);
   }
 
-  const cudaStream_t& cuda_stream_h2d() const {
+  const sycl::queue*& cuda_stream_h2d() const {
     return cuda_streams_[num_cuda_streams_];
   }
 
-  const cudaStream_t& cuda_stream_d2h() const {
+  const sycl::queue*& cuda_stream_d2h() const {
     return cuda_streams_[num_cuda_streams_ + 1];
   }
 
@@ -358,11 +395,22 @@ class cudaEnv {
     }
 
     // set device for current MPI process
-    CudaSafeCall(cudaSetDevice(current_cuda_device_id_));
+    /*
+    DPCT1003:11: Migrated API does not return error code. (*, 0) is inserted.
+    You may need to rewrite this code.
+    */
+    CudaSafeCall(
+        (dpct::dev_mgr::instance().select_device(current_cuda_device_id_), 0));
 
     /// check the capability of CUDA device
-    cudaDeviceProp prop;
-    CudaSafeCall(cudaGetDeviceProperties(&prop, device_id));
+    dpct::device_info prop;
+    /*
+    DPCT1003:12: Migrated API does not return error code. (*, 0) is inserted.
+    You may need to rewrite this code.
+    */
+    CudaSafeCall(
+        (dpct::dev_mgr::instance().get_device(device_id).get_device_info(prop),
+         0));
     if (!prop.managedMemory) {
       throw std::runtime_error("CUDA Device doesn't support managedMemory\n");
     }
@@ -405,7 +453,7 @@ class cudaEnv {
 namespace detail {
 
 template <typename Range>
-const cudaStream_t& get_stream_based_on_range(const Range& range) {
+const sycl::queue*& get_stream_based_on_range(const Range& range) {
   // TODO better way to get stream based on the id of tensor
   auto stream_id = range.offset() % cudaEnv::instance()->num_cuda_streams();
   auto& stream = cudaEnv::instance()->cuda_stream(stream_id);

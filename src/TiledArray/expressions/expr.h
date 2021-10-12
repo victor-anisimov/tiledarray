@@ -42,7 +42,7 @@
 #include "TiledArray/tile_interface/trace.h"
 #include "expr_engine.h"
 #ifdef TILEDARRAY_HAS_CUDA
-#include <TiledArray/cuda/cuda_task_fn.h>
+#include <TiledArray/gpu/cuda_task_fn.h>
 #include <TiledArray/external/cuda.h>
 #endif
 

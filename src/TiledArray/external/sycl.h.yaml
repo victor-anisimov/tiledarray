@@ -1,0 +1,473 @@
+---
+MainSourceFile:  '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/sycl/TiledArray/external/cuda.h'
+Replacements:
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          917
+    Length:          0
+    ReplacementText: "#include <CL/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          1034
+    Length:          18
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          1052
+    Length:          26
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          1078
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          1111
+    Length:          28
+    ReplacementText: "<dpct/dpl_utils.hpp>\n#include <oneapi/dpl/execution>\n#include <oneapi/dpl/algorithm>"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          1140
+    Length:          32
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          1777
+    Length:          9
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          1863
+    Length:          0
+    ReplacementText: "  /*\n  DPCT1000:1: Error handling if-stmt was detected but could not be rewritten.\n  */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          1869
+    Length:          11
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          1917
+    Length:          0
+    ReplacementText: "    /*\n    DPCT1001:0: The statement could not be removed.\n    */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          2129
+    Length:          9
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          2249
+    Length:          0
+    ReplacementText: "  /*\n  DPCT1000:3: Error handling if-stmt was detected but could not be rewritten.\n  */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          2255
+    Length:          11
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          2277
+    Length:          0
+    ReplacementText: "    /*\n    DPCT1001:2: The statement could not be removed.\n    */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          2471
+    Length:          0
+    ReplacementText: "  /*\n  DPCT1010:6: SYCL uses exceptions to report errors and does not use the error codes. The call was replaced with 0. You need to rewrite this code.\n  */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          2473
+    Length:          9
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          2489
+    Length:          18
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          2509
+    Length:          0
+    ReplacementText: "  /*\n  DPCT1000:5: Error handling if-stmt was detected but could not be rewritten.\n  */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          2515
+    Length:          11
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          2563
+    Length:          0
+    ReplacementText: "    /*\n    DPCT1001:4: The statement could not be removed.\n    */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          3358
+    Length:          0
+    ReplacementText: "  /*\n  DPCT1003:7: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          3373
+    Length:          32
+    ReplacementText: '(num_devices = dpct::dev_mgr::instance().device_count(), 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          4957
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          5360
+    Length:          5
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          5366
+    Length:          12
+    ReplacementText: 'sycl::queue'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          5379
+    Length:          0
+    ReplacementText: '* const '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          5449
+    Length:          0
+    ReplacementText: "  /*\n  DPCT1007:8: Migration of this CUDA API is not supported by the Intel(R) DPC++ Compatibility Tool.\n  */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          5775
+    Length:          12
+    ReplacementText: 'sycl::queue *'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          5846
+    Length:          12
+    ReplacementText: 'sycl::queue *'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          5962
+    Length:          5
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          5968
+    Length:          12
+    ReplacementText: 'sycl::queue'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          5981
+    Length:          0
+    ReplacementText: '* const '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          7125
+    Length:          0
+    ReplacementText: "      /*\n      DPCT1003:9: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n      */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          7144
+    Length:          13
+    ReplacementText: '(dpct::dev_mgr::instance().select_device'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          7168
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          7171
+    Length:          0
+    ReplacementText: "      /*\n      DPCT1027:10: The call to cudaDeviceSetCacheConfig was replaced with 0, because DPC++ currently does not support setting cache config on devices.\n      */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          7190
+    Length:          51
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          9557
+    Length:          5
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          9563
+    Length:          12
+    ReplacementText: 'sycl::queue'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          9576
+    Length:          0
+    ReplacementText: '* const '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          10891
+    Length:          12
+    ReplacementText: 'sycl::queue *'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          10985
+    Length:          12
+    ReplacementText: 'sycl::queue *'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          11083
+    Length:          12
+    ReplacementText: 'sycl::queue *'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          11849
+    Length:          0
+    ReplacementText: "    /*\n    DPCT1003:11: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n    */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          11866
+    Length:          13
+    ReplacementText: '(dpct::dev_mgr::instance().select_device'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          11904
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          11956
+    Length:          14
+    ReplacementText: 'dpct::device_info'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          11977
+    Length:          0
+    ReplacementText: "    /*\n    DPCT1003:12: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n    */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          11994
+    Length:          23
+    ReplacementText: '(dpct::dev_mgr::instance().get_device'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          12018
+    Length:          7
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          12035
+    Length:          0
+    ReplacementText: '.get_device_info(prop), 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/external/cuda.h'
+    Offset:          13477
+    Length:          12
+    ReplacementText: 'sycl::queue *'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest: []
+...

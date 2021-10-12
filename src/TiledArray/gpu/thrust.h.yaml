@@ -1,0 +1,86 @@
+---
+MainSourceFile:  '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/sycl/TiledArray/cuda/thrust.h'
+Replacements:
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/thrust.h'
+    Offset:          916
+    Length:          0
+    ReplacementText: "#include <CL/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/thrust.h'
+    Offset:          976
+    Length:          30
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/thrust.h'
+    Offset:          1006
+    Length:          33
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/thrust.h'
+    Offset:          1040
+    Length:          31
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/thrust.h'
+    Offset:          1465
+    Length:          21
+    ReplacementText: 'dpct::device_vector'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/thrust.h'
+    Offset:          1518
+    Length:          24
+    ReplacementText: 'dpct::get_raw_pointer'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/thrust.h'
+    Offset:          1608
+    Length:          21
+    ReplacementText: 'dpct::device_vector'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/thrust.h'
+    Offset:          1661
+    Length:          24
+    ReplacementText: 'dpct::get_raw_pointer'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/thrust.h'
+    Offset:          1799
+    Length:          21
+    ReplacementText: 'dpct::device_vector'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest: []
+...

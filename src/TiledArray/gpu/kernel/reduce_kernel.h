@@ -21,6 +21,93 @@
  *
  */
 
+#ifdef SYCL
+/*
+ * SYCL portion of the code begins here
+ */
+
+#ifndef TILEDARRAY_SYCL_REDUCE_KERNEL_H__INCLUDED
+#define TILEDARRAY_SYCL_REDUCE_KERNEL_H__INCLUDED
+
+#include <CL/sycl.hpp>
+#include "dpct/dpct.hpp"
+#include <TiledArray/config.h>
+
+#ifdef TILEDARRAY_HAS_SYCL
+
+namespace TiledArray {
+
+// foreach(i) result *= arg[i]
+int product_sycl_kernel(const int *arg, std::size_t n, sycl::queue *stream,
+                        int device_id);
+
+float product_sycl_kernel(const float *arg, std::size_t n, sycl::queue *stream,
+                          int device_id);
+
+double product_sycl_kernel(const double *arg, std::size_t n,
+                           sycl::queue *stream, int device_id);
+
+// foreach(i) result += arg[i]
+int sum_sycl_kernel(const int *arg, std::size_t n, sycl::queue *stream,
+                    int device_id);
+
+float sum_sycl_kernel(const float *arg, std::size_t n, sycl::queue *stream,
+                      int device_id);
+
+double sum_sycl_kernel(const double *arg, std::size_t n, sycl::queue *stream,
+                       int device_id);
+
+// foreach(i) result = max(result, arg[i])
+int max_sycl_kernel(const int *arg, std::size_t n, sycl::queue *stream,
+                    int device_id);
+
+float max_sycl_kernel(const float *arg, std::size_t n, sycl::queue *stream,
+                      int device_id);
+
+double max_sycl_kernel(const double *arg, std::size_t n, sycl::queue *stream,
+                       int device_id);
+
+// foreach(i) result = min(result, arg[i])
+int min_sycl_kernel(const int *arg, std::size_t n, sycl::queue *stream,
+                    int device_id);
+
+float min_sycl_kernel(const float *arg, std::size_t n, sycl::queue *stream,
+                      int device_id);
+
+double min_sycl_kernel(const double *arg, std::size_t n, sycl::queue *stream,
+                       int device_id);
+
+// foreach(i) result = max(result, abs(arg[i]))
+int absmax_sycl_kernel(const int *arg, std::size_t n, sycl::queue *stream,
+                       int device_id);
+
+float absmax_sycl_kernel(const float *arg, std::size_t n, sycl::queue *stream,
+                         int device_id);
+
+double absmax_sycl_kernel(const double *arg, std::size_t n, sycl::queue *stream,
+                          int device_id);
+
+// foreach(i) result = min(result, abs(arg[i]))
+int absmin_sycl_kernel(const int *arg, std::size_t n, sycl::queue *stream,
+                       int device_id);
+
+float absmin_sycl_kernel(const float *arg, std::size_t n, sycl::queue *stream,
+                         int device_id);
+
+double absmin_sycl_kernel(const double *arg, std::size_t n, sycl::queue *stream,
+                          int device_id);
+
+}  // namespace TiledArray
+
+#endif  // TILEDARRAY_HAS_SYCL
+
+#endif  // TILEDARRAY_SYCL_REDUCE_KERNEL_H__INCLUDED
+
+#else   // SYCL
+/*
+ * CUDA portion of the code begins here
+ */
+
 #ifndef TILEDARRAY_CUDA_REDUCE_KERNEL_H__INCLUDED
 #define TILEDARRAY_CUDA_REDUCE_KERNEL_H__INCLUDED
 
@@ -95,3 +182,5 @@ double absmin_cuda_kernel(const double *arg, std::size_t n, cudaStream_t stream,
 #endif  // TILEDARRAY_HAS_CUDA
 
 #endif  // TILEDARRAY_CUDA_REDUCE_KERNEL_H__INCLUDED
+
+#endif  // SYCL

@@ -1,0 +1,2552 @@
+---
+MainSourceFile:  '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/sycl/TiledArray/cuda/cublas.h'
+Replacements:
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          913
+    Length:          0
+    ReplacementText: "#include <CL/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          1041
+    Length:          0
+    ReplacementText: "\n#include <oneapi/mkl.hpp>\n#include <dpct/blas_utils.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          1042
+    Length:          23
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          1074
+    Length:          28
+    ReplacementText: "<dpct/dpl_utils.hpp>\n#include <oneapi/dpl/execution>\n#include <oneapi/dpl/algorithm>"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          1103
+    Length:          32
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          1272
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          1398
+    Length:          21
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          1838
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          1889
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          1973
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          1989
+    Length:          0
+    ReplacementText: "      /*\n      DPCT1003:0: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n      */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          2010
+    Length:          21
+    ReplacementText: '(*handle_ = &dpct::get_default_queue(), 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          2034
+    Length:          0
+    ReplacementText: "      /*\n      DPCT1027:1: The call to cublasSetPointerMode was replaced with 0, because the function call is redundant in DPC++.\n      */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          2055
+    Length:          56
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          2215
+    Length:          17
+    ReplacementText: 'oneapi::mkl::transpose'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          2275
+    Length:          17
+    ReplacementText: 'oneapi::mkl::transpose'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          2374
+    Length:          11
+    ReplacementText: 'oneapi::mkl::transpose::nontrans'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          2447
+    Length:          11
+    ReplacementText: 'oneapi::mkl::transpose::trans'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          2524
+    Length:          11
+    ReplacementText: 'oneapi::mkl::transpose::conjtrans'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          2626
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          2652
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          2675
+    Length:          17
+    ReplacementText: 'oneapi::mkl::transpose'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          2727
+    Length:          17
+    ReplacementText: 'oneapi::mkl::transpose'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          2934
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          2972
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          2995
+    Length:          17
+    ReplacementText: 'oneapi::mkl::transpose'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3021
+    Length:          17
+    ReplacementText: 'oneapi::mkl::transpose'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3184
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3188
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:2: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3195
+    Length:          102
+    ReplacementText: '(oneapi::mkl::blas::gemm(*handle, transa, transb, m, n, k, dpct::get_value(alpha, *handle), A, lda, B, ldb, dpct::get_value(beta, *handle), C, ldc)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3297
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3300
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3320
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3359
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3382
+    Length:          17
+    ReplacementText: 'oneapi::mkl::transpose'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3408
+    Length:          17
+    ReplacementText: 'oneapi::mkl::transpose'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3576
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3580
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:3: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3587
+    Length:          102
+    ReplacementText: '(oneapi::mkl::blas::gemm(*handle, transa, transb, m, n, k, dpct::get_value(alpha, *handle), A, lda, B, ldb, dpct::get_value(beta, *handle), C, ldc)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3689
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3692
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3763
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3789
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3924
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          3964
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4201
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4205
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:4: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4212
+    Length:          47
+    ReplacementText: '(oneapi::mkl::blas::axpy(*handle, n, dpct::get_value(alpha, *handle), x, incx, y, incy)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4259
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4262
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4283
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4325
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4571
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4575
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:5: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4582
+    Length:          47
+    ReplacementText: '(oneapi::mkl::blas::axpy(*handle, n, dpct::get_value(alpha, *handle), x, incx, y, incy)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4629
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4632
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4653
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4691
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4875
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4922
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:6: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4929
+    Length:          54
+    ReplacementText: '(oneapi::mkl::blas::axpy(*handle, n, dpct::get_value(&alpha_float, *handle), x, incx, y, incy)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4983
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          4986
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          5007
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          5048
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          5289
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          5336
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:7: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          5343
+    Length:          54
+    ReplacementText: '(oneapi::mkl::blas::axpy(*handle, n, dpct::get_value(&alpha_float, *handle), x, incx, y, incy)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          5397
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          5400
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          5421
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          5460
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          5648
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          5698
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:8: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          5705
+    Length:          55
+    ReplacementText: '(oneapi::mkl::blas::axpy(*handle, n, dpct::get_value(&alpha_double, *handle), x, incx, y, incy)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          5760
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          5763
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          5784
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          5825
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6067
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6117
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:9: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6124
+    Length:          55
+    ReplacementText: '(oneapi::mkl::blas::axpy(*handle, n, dpct::get_value(&alpha_double, *handle), x, incx, y, incy)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6179
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6182
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6203
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6273
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6409
+    Length:          21
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6454
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6541
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6687
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6732
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:10: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6739
+    Length:          54
+    ReplacementText: '(oneapi::mkl::blas::axpy(*handle, n, dpct::get_value(&alpha_float, *handle), x, incx, y, incy)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6793
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6796
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6817
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          6886
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7010
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7066
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:11: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7073
+    Length:          54
+    ReplacementText: '(oneapi::mkl::blas::axpy(*handle, n, dpct::get_value(&alpha_float, *handle), x, incx, y, incy)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7127
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7130
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7151
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7222
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7348
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7404
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:12: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7411
+    Length:          54
+    ReplacementText: '(oneapi::mkl::blas::axpy(*handle, n, dpct::get_value(&alpha_float, *handle), x, incx, y, incy)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7465
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7468
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7489
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7561
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7688
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7744
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:13: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7751
+    Length:          54
+    ReplacementText: '(oneapi::mkl::blas::axpy(*handle, n, dpct::get_value(&alpha_float, *handle), x, incx, y, incy)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7805
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7808
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7829
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          7900
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8038
+    Length:          21
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8083
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8171
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8319
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8367
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:14: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8374
+    Length:          55
+    ReplacementText: '(oneapi::mkl::blas::axpy(*handle, n, dpct::get_value(&alpha_double, *handle), x, incx, y, incy)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8429
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8432
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8453
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8523
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8649
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8708
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:15: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8715
+    Length:          55
+    ReplacementText: '(oneapi::mkl::blas::axpy(*handle, n, dpct::get_value(&alpha_double, *handle), x, incx, y, incy)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8770
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8773
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8794
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8866
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          8994
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9053
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:16: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9060
+    Length:          55
+    ReplacementText: '(oneapi::mkl::blas::axpy(*handle, n, dpct::get_value(&alpha_double, *handle), x, incx, y, incy)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9115
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9118
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9139
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9212
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9341
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9400
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:17: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9407
+    Length:          55
+    ReplacementText: '(oneapi::mkl::blas::axpy(*handle, n, dpct::get_value(&alpha_double, *handle), x, incx, y, incy)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9462
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9465
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9518
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9543
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9673
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9705
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9880
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9884
+    Length:          0
+    ReplacementText: "float* res_temp_ptr_ct1 = result;\n  if(sycl::get_pointer_type(result, handle->get_context())!=sycl::usm::alloc::device && sycl::get_pointer_type(result, handle->get_context())!=sycl::usm::alloc::shared) {\n    res_temp_ptr_ct1 = sycl::malloc_shared<float>(1, dpct::get_default_queue());\n  }\n  oneapi::mkl::blas::dot(*handle, n, x, incx, y, incy, res_temp_ptr_ct1);\n  if(sycl::get_pointer_type(result, handle->get_context())!=sycl::usm::alloc::device && sycl::get_pointer_type(result, handle->get_context())!=sycl::usm::alloc::shared) {\n    handle->wait();\n    *result = *res_temp_ptr_ct1;\n    sycl::free(res_temp_ptr_ct1, dpct::get_default_queue());\n  }\n  /*\n  DPCT1041:18: SYCL uses exceptions to report errors, it does not use error codes. 0 is used instead of an error code in a return statement. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: true
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9891
+    Length:          47
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9941
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9962
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          9995
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10215
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10219
+    Length:          0
+    ReplacementText: "double* res_temp_ptr_ct2 = result;\n  if(sycl::get_pointer_type(result, handle->get_context())!=sycl::usm::alloc::device && sycl::get_pointer_type(result, handle->get_context())!=sycl::usm::alloc::shared) {\n    res_temp_ptr_ct2 = sycl::malloc_shared<double>(1, dpct::get_default_queue());\n  }\n  oneapi::mkl::blas::dot(*handle, n, x, incx, y, incy, res_temp_ptr_ct2);\n  if(sycl::get_pointer_type(result, handle->get_context())!=sycl::usm::alloc::device && sycl::get_pointer_type(result, handle->get_context())!=sycl::usm::alloc::shared) {\n    handle->wait();\n    *result = *res_temp_ptr_ct2;\n    sycl::free(res_temp_ptr_ct2, dpct::get_default_queue());\n  }\n  /*\n  DPCT1041:19: SYCL uses exceptions to report errors, it does not use error codes. 0 is used instead of an error code in a return statement. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: true
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10226
+    Length:          47
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10276
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10345
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10371
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10485
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10525
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10689
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10693
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:20: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10700
+    Length:          38
+    ReplacementText: '(oneapi::mkl::blas::scal(*handle, n, dpct::get_value(alpha, *handle), x, incx)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10738
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10741
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10763
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10805
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10975
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10979
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:21: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          10986
+    Length:          38
+    ReplacementText: '(oneapi::mkl::blas::scal(*handle, n, dpct::get_value(alpha, *handle), x, incx)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11024
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11027
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11049
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11087
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11245
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11292
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:22: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11299
+    Length:          45
+    ReplacementText: '(oneapi::mkl::blas::scal(*handle, n, dpct::get_value(&alpha_float, *handle), x, incx)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11344
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11347
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11369
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11410
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11577
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11624
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:23: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11631
+    Length:          45
+    ReplacementText: '(oneapi::mkl::blas::scal(*handle, n, dpct::get_value(&alpha_float, *handle), x, incx)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11676
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11679
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11704
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11743
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11904
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11954
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:24: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          11961
+    Length:          46
+    ReplacementText: '(oneapi::mkl::blas::scal(*handle, n, dpct::get_value(&alpha_double, *handle), x, incx)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12007
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12010
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12032
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12073
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12240
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12290
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:25: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12297
+    Length:          46
+    ReplacementText: '(oneapi::mkl::blas::scal(*handle, n, dpct::get_value(&alpha_double, *handle), x, incx)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12343
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12346
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12368
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12438
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12548
+    Length:          21
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12593
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12680
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12800
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12845
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:26: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12852
+    Length:          45
+    ReplacementText: '(oneapi::mkl::blas::scal(*handle, n, dpct::get_value(&alpha_float, *handle), x, incx)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12897
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12900
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12921
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          12990
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13088
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13144
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:27: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13151
+    Length:          45
+    ReplacementText: '(oneapi::mkl::blas::scal(*handle, n, dpct::get_value(&alpha_float, *handle), x, incx)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13196
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13199
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13220
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13291
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13391
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13447
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:28: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13454
+    Length:          45
+    ReplacementText: '(oneapi::mkl::blas::scal(*handle, n, dpct::get_value(&alpha_float, *handle), x, incx)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13499
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13502
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13523
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13595
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13696
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13752
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:29: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13759
+    Length:          45
+    ReplacementText: '(oneapi::mkl::blas::scal(*handle, n, dpct::get_value(&alpha_float, *handle), x, incx)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13804
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13807
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13828
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          13899
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14010
+    Length:          21
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14055
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14143
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14264
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14312
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:30: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14319
+    Length:          46
+    ReplacementText: '(oneapi::mkl::blas::scal(*handle, n, dpct::get_value(&alpha_double, *handle), x, incx)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14365
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14368
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14389
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14459
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14558
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14617
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:31: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14624
+    Length:          46
+    ReplacementText: '(oneapi::mkl::blas::scal(*handle, n, dpct::get_value(&alpha_double, *handle), x, incx)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14670
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14673
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14694
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14766
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14867
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14926
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:32: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14933
+    Length:          46
+    ReplacementText: '(oneapi::mkl::blas::scal(*handle, n, dpct::get_value(&alpha_double, *handle), x, incx)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14979
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          14982
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15003
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15076
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15178
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15237
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:33: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15244
+    Length:          46
+    ReplacementText: '(oneapi::mkl::blas::scal(*handle, n, dpct::get_value(&alpha_double, *handle), x, incx)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15290
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15293
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15344
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15370
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15485
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15511
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15620
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15624
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:34: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15631
+    Length:          40
+    ReplacementText: '(oneapi::mkl::blas::copy(*handle, n, x, incx, y, incy)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15671
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15674
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15695
+    Length:          14
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15721
+    Length:          14
+    ReplacementText: 'sycl::queue*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15832
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15836
+    Length:          0
+    ReplacementText: "/*\n  DPCT1003:35: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n  */\n  "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15843
+    Length:          40
+    ReplacementText: '(oneapi::mkl::blas::copy(*handle, n, x, incx, y, incy)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15883
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cublas.h'
+    Offset:          15886
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest: []
+...

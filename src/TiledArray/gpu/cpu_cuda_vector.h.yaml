@@ -1,0 +1,122 @@
+---
+MainSourceFile:  '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/sycl/TiledArray/cuda/cpu_cuda_vector.h'
+Replacements:
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cpu_cuda_vector.h'
+    Offset:          106
+    Length:          0
+    ReplacementText: "#include <CL/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cpu_cuda_vector.h'
+    Offset:          780
+    Length:          19
+    ReplacementText: 'std::vector'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cpu_cuda_vector.h'
+    Offset:          855
+    Length:          19
+    ReplacementText: 'std::vector'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cpu_cuda_vector.h'
+    Offset:          948
+    Length:          19
+    ReplacementText: 'std::vector'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cpu_cuda_vector.h'
+    Offset:          1027
+    Length:          19
+    ReplacementText: 'std::vector'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cpu_cuda_vector.h'
+    Offset:          3346
+    Length:          24
+    ReplacementText: 'dpct::get_raw_pointer'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cpu_cuda_vector.h'
+    Offset:          3481
+    Length:          24
+    ReplacementText: 'dpct::get_raw_pointer'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cpu_cuda_vector.h'
+    Offset:          4571
+    Length:          19
+    ReplacementText: 'std::vector'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cpu_cuda_vector.h'
+    Offset:          4626
+    Length:          21
+    ReplacementText: 'dpct::device_vector'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cpu_cuda_vector.h'
+    Offset:          5309
+    Length:          12
+    ReplacementText: 'sycl::queue'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cpu_cuda_vector.h'
+    Offset:          5322
+    Length:          0
+    ReplacementText: '*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cpu_cuda_vector.h'
+    Offset:          5697
+    Length:          12
+    ReplacementText: 'sycl::queue'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/cpu_cuda_vector.h'
+    Offset:          5710
+    Length:          0
+    ReplacementText: '*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest: []
+...

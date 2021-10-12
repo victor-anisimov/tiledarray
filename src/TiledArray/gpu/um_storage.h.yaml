@@ -1,0 +1,122 @@
+---
+MainSourceFile:  '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/sycl/TiledArray/cuda/um_storage.h'
+Replacements:
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/um_storage.h'
+    Offset:          921
+    Length:          0
+    ReplacementText: "#include <CL/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/um_storage.h'
+    Offset:          1741
+    Length:          12
+    ReplacementText: 'sycl::queue'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/um_storage.h'
+    Offset:          1754
+    Length:          0
+    ReplacementText: '*'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/um_storage.h'
+    Offset:          1982
+    Length:          0
+    ReplacementText: "        /*\n        DPCT1003:49: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n        */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/um_storage.h'
+    Offset:          2003
+    Length:          172
+    ReplacementText: '(stream->prefetch(data(vec),size(vec) * sizeof(value_type))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/um_storage.h'
+    Offset:          2175
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/um_storage.h'
+    Offset:          2445
+    Length:          22
+    ReplacementText: 'device = dpct::dev_mgr::instance().current_device_id()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/um_storage.h'
+    Offset:          2470
+    Length:          0
+    ReplacementText: "        /*\n        DPCT1003:50: Migrated API does not return error code. (*, 0) is inserted. You may need to rewrite this code.\n        */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/um_storage.h'
+    Offset:          2491
+    Length:          92
+    ReplacementText: '(stream->prefetch(data(vec),size(vec) * sizeof(value_type))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/um_storage.h'
+    Offset:          2583
+    Length:          0
+    ReplacementText: ', 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/um_storage.h'
+    Offset:          2994
+    Length:          5
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/um_storage.h'
+    Offset:          3000
+    Length:          12
+    ReplacementText: 'sycl::queue'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/vanisimov/tiledarray/tiledarray/src/TiledArray/cuda/um_storage.h'
+    Offset:          3013
+    Length:          0
+    ReplacementText: '* const '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest: []
+...

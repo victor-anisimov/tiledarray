@@ -21,6 +21,55 @@
  *
  */
 
+#ifdef SYCL
+/*
+ * SYCL portion of the code begins here
+ */
+
+#ifndef TILEDARRAY_SYCL_MULT_KERNEL_IMPL_H__INCLUDED
+#define TILEDARRAY_SYCL_MULT_KERNEL_IMPL_H__INCLUDED
+
+#include <CL/sycl.hpp>
+#include "dpct/dpct.hpp"
+#include <TiledArray/external/sycl.h>
+
+namespace TiledArray {
+
+/// result[i] = result[i] * arg[i]
+template <typename T>
+void mult_to_sycl_kernel_impl(T *result, const T *arg, std::size_t n,
+                              sycl::queue *stream, int device_id) {
+  dpct::dev_mgr::instance().select_device(device_id);
+
+  std::multiplies<T> mul_op;
+  std::transform(
+      oneapi::dpl::execution::make_device_policy(*stream), dpct::get_device_pointer(arg),
+      dpct::get_device_pointer(arg) + n, dpct::get_device_pointer(result),
+      dpct::get_device_pointer(result), mul_op);
+}
+
+/// result[i] = arg1[i] * arg2[i]
+template <typename T>
+void mult_sycl_kernel_impl(T *result, const T *arg1, const T *arg2,
+                           std::size_t n, sycl::queue *stream, int device_id) {
+  dpct::dev_mgr::instance().select_device(device_id);
+
+  std::multiplies<T> mul_op;
+  std::transform(
+      oneapi::dpl::execution::make_device_policy(*stream), dpct::get_device_pointer(arg1),
+      dpct::get_device_pointer(arg1) + n, dpct::get_device_pointer(arg2),
+      dpct::get_device_pointer(result), mul_op);
+}
+
+}  // namespace TiledArray
+
+#endif  // TILEDARRAY_SYCL_MULT_KERNEL_IMPL_H__INCLUDED
+
+#else // SYCL
+/*
+ * CUDA portion of the code begins here
+ */
+
 #ifndef TILEDARRAY_CUDA_MULT_KERNEL_IMPL_H__INCLUDED
 #define TILEDARRAY_CUDA_MULT_KERNEL_IMPL_H__INCLUDED
 
@@ -59,3 +108,5 @@ void mult_cuda_kernel_impl(T *result, const T *arg1, const T *arg2,
 }  // namespace TiledArray
 
 #endif  // TILEDARRAY_CUDA_MULT_KERNEL_IMPL_H__INCLUDED
+
+#endif // SYCL

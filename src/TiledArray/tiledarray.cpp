@@ -2,7 +2,7 @@
 #include <TiledArray/initialize.h>
 
 #ifdef TILEDARRAY_HAS_CUDA
-#include <TiledArray/cuda/cublas.h>
+#include <TiledArray/gpu/cublas.h>
 #include <TiledArray/external/cuda.h>
 #include <librett.h>
 #endif

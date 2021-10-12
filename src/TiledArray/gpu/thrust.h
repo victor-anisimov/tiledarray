@@ -21,6 +21,58 @@
  *
  */
 
+#ifdef SYCL
+/*
+ * SYCL portion of the code begins here
+ */
+
+#ifndef TILEDARRAY_SYCL_THRUST_H__INCLUDED
+#define TILEDARRAY_SYCL_THRUST_H__INCLUDED
+
+#include <CL/sycl.hpp>
+#include "dpct/dpct.hpp"
+#include "dpct/dpl_utils.hpp"
+#include <TiledArray/config.h>
+
+#ifdef TILEDARRAY_HAS_SYCL
+
+// thrust::device_vector::data() returns a proxy, provide an overload for
+// std::data() to provide raw ptr
+namespace thrust {
+
+// thrust::device_malloc_allocator name changed to device_allocator after
+// version 10
+//#if CUDART_VERSION < 10000
+//template <typename T>
+//using device_allocator = thrust::device_malloc_allocator<T>;
+//#endif
+
+template <typename T>
+using device_allocator = sycl::buffer_allocator<T>;
+
+template <typename T, typename Alloc>
+const T* data(const dpct::device_vector<T, Alloc>& dev_vec) {
+  return dpct::get_raw_pointer(dev_vec.data());
+}
+template <typename T, typename Alloc>
+T* data(dpct::device_vector<T, Alloc>& dev_vec) {
+  return dpct::get_raw_pointer(dev_vec.data());
+}
+
+// this must be instantiated in a .cu file
+template <typename T, typename Alloc>
+void resize(dpct::device_vector<T, Alloc>& dev_vec, size_t size);
+}  // namespace thrust
+
+#endif  // TILEDARRAY_HAS_SYCL
+
+#endif  // TILEDARRAY_SYCL_THRUST_H__INCLUDED
+
+#else   // SYCL
+/*
+ * CUDA portion of the code begins here
+ */
+
 #ifndef TILEDARRAY_CUDA_THRUST_H__INCLUDED
 #define TILEDARRAY_CUDA_THRUST_H__INCLUDED
 
@@ -60,3 +112,5 @@ void resize(thrust::device_vector<T, Alloc>& dev_vec, size_t size);
 #endif  // TILEDARRAY_HAS_CUDA
 
 #endif  // TILEDARRAY_CUDA_THRUST_H__INCLUDED
+
+#endif  // SYCL

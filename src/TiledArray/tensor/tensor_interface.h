@@ -26,6 +26,10 @@
 #ifndef TILEDARRAY_TENSOR_TENSOR_VIEW_H__INCLUDED
 #define TILEDARRAY_TENSOR_TENSOR_VIEW_H__INCLUDED
 
+#ifdef SYCL
+#include <CL/sycl.hpp>
+#endif
+
 #include <TiledArray/tensor/complex.h>
 #include <TiledArray/tensor/kernels.h>
 #include <TiledArray/tile_interface/permute.h>
@@ -1080,7 +1084,11 @@ class TensorInterface {
   numeric_type abs_min() const {
     auto abs_min_op = [](numeric_type& MADNESS_RESTRICT res,
                          const numeric_type arg) {
-      res = std::min(res, std::abs(arg));
+#ifdef SYCL
+      res = std::min(res, sycl::abs(arg));
+#else
+      res = std::min(res,  std::abs(arg));
+#endif
     };
     auto min_op = [](numeric_type& MADNESS_RESTRICT res,
                      const numeric_type arg) { res = std::min(res, arg); };
@@ -1093,7 +1101,11 @@ class TensorInterface {
   numeric_type abs_max() const {
     auto abs_max_op = [](numeric_type& MADNESS_RESTRICT res,
                          const numeric_type arg) {
-      res = std::max(res, std::abs(arg));
+#ifdef SYCL
+      res = std::max(res, sycl::abs(arg));
+#else
+      res = std::max(res,  std::abs(arg));
+#endif
     };
     auto max_op = [](numeric_type& MADNESS_RESTRICT res,
                      const numeric_type arg) { res = std::max(res, arg); };
