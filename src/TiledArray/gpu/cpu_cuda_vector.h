@@ -15,11 +15,6 @@
 
 #include <madness/world/archive.h>
 
-namespace thrust {
-template <typename T>
-using device_allocator = sycl::buffer_allocator;
-}
-
 namespace TiledArray {
 
 /// \brief a vector that lives on either host or device side, or both
@@ -28,7 +23,7 @@ namespace TiledArray {
 /// \tparam HostAlloc The allocator type used for host data
 /// \tparam DeviceAlloc The allocator type used for device data
 template <typename T, typename HostAlloc = std::allocator<T>,
-          typename DeviceAlloc = thrust::device_allocator<T>>
+          typename DeviceAlloc = dpct::device_pointer<T>>
 class cpu_cuda_vector {
  public:
   typedef T value_type;
@@ -50,7 +45,7 @@ class cpu_cuda_vector {
                                                                        : 0),
         state_(st) {
     if (static_cast<int>(st) & static_cast<int>(state::device))
-      thrust::resize(device_vec_, size);
+      device_vec_.resize(size);
   }
   /// creates a vector with \c size elements filled with \c value
   /// \param value the value used to fill the vector
@@ -91,7 +86,8 @@ class cpu_cuda_vector {
   /// moves the data from the device to the host (even if it's there)
   void to_host() const {
     assert(on_device());
-    host_vec_ = device_vec_;
+    //host_vec_ = device_vec_;
+    std::copy(oneapi::dpl::execution::dpcpp_default, device_vec_.begin(), device_vec_.end(), host_vec_.begin());
     state_ = state::all;
   }
 

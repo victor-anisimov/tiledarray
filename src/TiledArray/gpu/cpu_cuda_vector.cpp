@@ -3,6 +3,7 @@
 #include "dpct/dpct.hpp"
 #include <TiledArray/gpu/cpu_cuda_vector.h>
 
+/*
 namespace thrust {
 template<>
 void resize<double,thrust::device_allocator<double>>(
@@ -17,6 +18,7 @@ void resize<float,thrust::device_allocator<float>>(
     dev_vec.resize(size);
 }
 }
+*/
 
 namespace TiledArray {
 template class cpu_cuda_vector<double>;
@@ -26,6 +28,7 @@ template class cpu_cuda_vector<float>;
 // Thrust included in CUDA 9+ seems to generate uninstantiated CUB calls
 //#if __CUDACC_VER_MAJOR__  >= 9
 
+/*
 // cuda_cub::copy
 template <typename Real> auto force_missing_copy_instantiations() {
   return thrust::cuda_cub::copy<
@@ -69,6 +72,7 @@ auto force_missing_copy_n_instantiations_double_float(){
 auto force_missing_copy_n_instantiations_long_long(){
   return force_missing_copy_n_instantiations<unsigned long, unsigned long>();
 }
+*/
 
 //#endif  // __CUDACC_VER_MAJOR__  >= 9
 

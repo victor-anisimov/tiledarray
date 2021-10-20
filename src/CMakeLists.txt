@@ -271,7 +271,7 @@ if(ENABLE_SYCL)
 
   #append_flags(CMAKE_CXX_FLAGS "-fsycl")
   set_source_files_properties(TiledArray/gpu/btas_um_tensor.cpp       PROPERTIES COMPILE_FLAGS -fsycl)
-  set_source_files_properties(TiledArray/gpu/cpu_cuda_vector.cpp      PROPERTIES COMPILE_FLAGS -fsycl -DONEDPL_USE_TBB_BACKEND=0 -D_GLIBCXX_USE_TBB_PAR_BACKEND=0)
+  set_source_files_properties(TiledArray/gpu/cpu_cuda_vector.cpp      PROPERTIES COMPILE_FLAGS "-fsycl -DONEDPL_USE_TBB_BACKEND=0 -D_GLIBCXX_USE_TBB_PAR_BACKEND=0")
   set_source_files_properties(TiledArray/gpu/kernel/mult_kernel.cpp   PROPERTIES COMPILE_FLAGS -fsycl)
   set_source_files_properties(TiledArray/gpu/kernel/reduce_kernel.cpp PROPERTIES COMPILE_FLAGS -fsycl)
   set_source_files_properties(TiledArray/gpu/um_storage.cpp           PROPERTIES COMPILE_FLAGS -fsycl)
